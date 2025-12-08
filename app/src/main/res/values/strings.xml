@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GalQQ</string>
+    <string name="res_inject_success">Resource injection successful</string>
+    
+    <!-- 模块设置 -->
+    <string name="gal_settings_title">Galgame 选项</string>
+    <string name="gal_settings_summary">为聊天添加三选项快捷回复</string>
+    
+    <!-- 主开关 -->
+    <string name="gal_enabled_title">启用 GalQQ</string>
+    <string name="gal_enabled_summary">启用模块功能</string>
+    
+    <!-- AI 设置 -->
+    <string name="gal_ai_cat_title">AI 设置</string>
+    <string name="gal_ai_enabled_title">启用 AI</string>
+    <string name="gal_ai_enabled_summary">使用 AI 生成回复选项</string>
+    <string name="gal_sys_prompt_title">AI 系统提示词</string>
+    <string name="gal_sys_prompt_summary">定义 AI 的角色和回复格式</string>
+    <string name="gal_sys_prompt_dialog">留空使用默认提示词</string>
+    <string name="gal_api_url_title">API 地址</string>
+    <string name="gal_api_url_summary">OpenAI 兼容的 API 端点</string>
+    <string name="gal_api_key_title">API 密钥</string>
+    <string name="gal_api_key_summary">您的 API 密钥</string>
+    
+    <!-- 词典设置 -->
+    <string name="gal_dict_cat_title">词典设置</string>
+    <string name="gal_dict_path_title">词典路径</string>
+    <string name="gal_dict_path_summary">本地词典文件的绝对路径（留空使用内置词典）</string>
+    
+    <!-- AI高级配置 -->
+    <string name="gal_ai_model_title">AI模型</string>
+    <string name="gal_ai_model_summary">选择AI模型（如gpt-3.5-turbo）</string>
+    <string name="gal_ai_provider_title">服务商</string>
+    <string name="gal_ai_provider_summary">选择AI服务商</string>
+    <string name="gal_ai_temperature_title">Temperature</string>
+    <string name="gal_ai_temperature_summary">控制回复的随机性（0.0-2.0）</string>
+    <string name="gal_ai_max_tokens_title">Max Tokens</string>
+    <string name="gal_ai_max_tokens_summary">最大生成字符数</string>
+    <string name="gal_test_api_title">测试API连接</string>
+    <string name="gal_test_api_summary">点击测试API配置是否正确</string>
+    <string name="gal_ai_log_title">AI日志</string>
+    <string name="gal_ai_log_summary">查看AI请求日志</string>
+    
+    <!-- AI日志界面 -->
+    <string name="ai_log_title">AI日志</string>
+    <string name="loading_logs">加载中...</string>
+    <string name="export_logs">导出</string>
+    <string name="clear_logs">清除</string>
+    <string name="logs_cleared">日志已清除</string>
+    
+    
+    <!-- 显示设置 -->
+    <string name="gal_display_cat_title">显示设置</string>
+    <string name="gal_auto_show_title">自动显示选项</string>
+    <string name="gal_auto_show_summary">开启后每条消息自动显示选项条；关闭后需点击按钮才生成选项</string>
+    
+    <!-- 图片识别设置 -->
+    <string name="gal_image_recognition_cat_title">图片识别</string>
+    <string name="gal_image_recognition_enabled_title">启用图片识别</string>
+    <string name="gal_image_recognition_enabled_summary">识别消息中的图片内容</string>
+    <string name="gal_emoji_recognition_enabled_title">启用表情包识别</string>
+    <string name="gal_emoji_recognition_enabled_summary">识别消息中的表情包</string>
+    
+    <!-- 外挂AI设置 -->
+    <string name="gal_vision_ai_cat_title">外挂AI (图片识别)</string>
+    <string name="gal_vision_ai_enabled_title">启用外挂AI</string>
+    <string name="gal_vision_ai_enabled_summary">使用外部AI服务识别图片内容</string>
+    <string name="gal_vision_ai_provider_title">外挂AI服务商</string>
+    <string name="gal_vision_ai_provider_summary">选择图片识别AI服务商</string>
+    <string name="gal_vision_api_url_title">外挂AI API URL</string>
+    <string name="gal_vision_api_url_summary">图片识别API地址</string>
+    <string name="gal_vision_api_key_title">外挂AI API Key</string>
+    <string name="gal_vision_api_key_summary">图片识别API密钥</string>
+    <string name="gal_vision_ai_model_title">外挂AI模型</string>
+    <string name="gal_vision_ai_model_summary">图片识别使用的模型</string>
+    <string name="gal_vision_use_proxy_title">外挂AI使用代理</string>
+    <string name="gal_vision_use_proxy_summary">图片识别请求是否使用主代理配置</string>
+    <string name="gal_test_vision_ai_title">测试外挂AI</string>
+    <string name="gal_test_vision_ai_summary">使用测试图片验证外挂AI配置</string>
+    <string name="gal_image_max_size_title">图片大小限制</string>
+    <string name="gal_image_max_size_summary">最大处理图片大小（KB）</string>
+    <string name="gal_image_description_max_length_title">描述长度限制</string>
+    <string name="gal_image_description_max_length_summary">图片描述最大字符数</string>
+    <string name="gal_vision_timeout_title">识别超时时间</string>
+    <string name="gal_vision_timeout_summary">图片识别请求超时时间（秒）</string>
+    
+    <!-- 图片识别提示 -->
+    <string name="vision_ai_test_success">外挂AI测试成功</string>
+    <string name="vision_ai_test_failed">外挂AI测试失败</string>
+    <string name="vision_ai_not_enabled">请先启用外挂AI</string>
+    <string name="vision_api_url_empty">请填写外挂AI API URL</string>
+    <string name="vision_api_key_empty">请填写外挂AI API Key</string>
+    <string name="vision_ai_testing">正在测试外挂AI连接...</string>
+    
+    <!-- 关于 -->
+    <string name="gal_about_cat_title">关于</string>
+    <string name="gal_contact_title">联系作者</string>
+    <string name="gal_contact_summary">点击查看联系方式</string>
+    <string name="gal_contact_dialog_title">联系作者</string>
+    <string name="gal_contact_dialog_message">Email: example@galqq.top</string>
+</resources>

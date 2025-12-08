@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="top.galqq">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:label="GalQQ"
+        android:icon="@drawable/ic_xposed"
+        android:theme="@android:style/Theme.DeviceDefault.Settings">
+        
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="为你的qq增加选项，让你的qq变成galgame！" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="51" />
+        <meta-data
+            android:name="xposedscope"
+            android:value="com.tencent.mobileqq" />
+        <meta-data
+            android:name="xposed.icon"
+            android:resource="@drawable/ic_xposed" />
+
+        <!-- ModuleInfoActivity - 桌面入口 + LSPosed 入口，显示模块介绍界面 -->
+        <activity
+            android:name=".ui.ModuleInfoActivity"
+            android:label="GalQQ"
+            android:exported="true"
+            android:theme="@style/Theme.GalQQ.DayNight">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="de.robv.android.xposed.category.MODULE_SETTINGS" />
+            </intent-filter>
+        </activity>
+
+        <!-- SettingsUiFragmentHostActivity - QQ 内部设置入口（不再作为 LSPosed 入口） -->
+        <activity
+            android:name=".ui.SettingsUiFragmentHostActivity"
+            android:label="GalQQ Settings"
+            android:icon="@mipmap/ic_launcher"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
+        </activity>
+        
+        <activity
+            android:name=".ui.AiLogViewerActivity"
+            android:label="@string/ai_log_title"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+            
+        <activity
+            android:name=".ui.AiMonitorActivity"
+            android:label="AI Monitor"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+            
+        <activity
+            android:name=".ui.PromptManagerActivity"
+            android:label="提示词管理"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.DayNight" />
+    </application>
+</manifest>

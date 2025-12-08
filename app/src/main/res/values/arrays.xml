@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- AI Provider选项 -->
+    <string-array name="ai_provider_names">
+        <item>月之暗面 (Kimi)</item>
+        <item>百度千帆 (文心)</item>
+        <item>智谱AI (GLM-4)</item>
+        <item>讯飞星火 (Spark)</item>
+        <item>百川智能 (Baichuan)</item>
+        <item>字节豆包 (Doubao)</item>
+        <item>商汤日日新 (SenseNova)</item>
+        <item>OpenAI</item>
+        <item>LinkAI</item>
+        <item>Groq</item>
+        <item>Together.ai</item>
+        <item>Fireworks.ai</item>
+        <item>DeepInfra</item>
+        <item>DeepSeek</item>
+        <item>阿里云DashScope</item>
+        <item>硅基流动 (SiliconFlow)</item>
+        <item>Ollama (本地)</item>
+        <item>Google (Gemini)</item>
+        <item>自定义</item>
+    </string-array>
+    
+    <string-array name="ai_provider_values">
+        <item>kimi</item>
+        <item>baidu</item>
+        <item>glm</item>
+        <item>spark</item>
+        <item>baichuan</item>
+        <item>doubao</item>
+        <item>sensenova</item>
+        <item>openai</item>
+        <item>linkai</item>
+        <item>groq</item>
+        <item>together</item>
+        <item>fireworks</item>
+        <item>deepinfra</item>
+        <item>deepseek</item>
+        <item>dashscope</item>
+        <item>siliconflow</item>
+        <item>ollama</item>
+        <item>google</item>
+        <item>custom</item>
+    </string-array>
+    
+    <string-array name="filter_mode_names">
+        <item>黑名单模式</item>
+        <item>白名单模式</item>
+    </string-array>
+    <string-array name="filter_mode_values">
+        <item>blacklist</item>
+        <item>whitelist</item>
+    </string-array>
+    
+    <!-- 好感度计算模型选项 -->
+    <string-array name="affinity_model_names">
+        <item>双向奔赴模型 - 只有互相关注才高分</item>
+        <item>加权平衡模型 - 平均值×平衡系数</item>
+        <item>综合加权模型 - 他在意我60%+我在意他40%</item>
+    </string-array>
+    <string-array name="affinity_model_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    
+    <!-- 代理类型选项 -->
+    <string-array name="proxy_type_names">
+        <item>HTTP 代理</item>
+        <item>SOCKS 代理</item>
+    </string-array>
+    <string-array name="proxy_type_values">
+        <item>HTTP</item>
+        <item>SOCKS</item>
+    </string-array>
+    
+    <!-- Reasoning Effort 思考模式选项 -->
+    <string-array name="reasoning_effort_names">
+        <item>关闭</item>
+        <item>minimal - 最小思考</item>
+        <item>none - 无思考</item>
+        <item>low - 低强度</item>
+        <item>medium - 中等强度</item>
+        <item>high - 高强度</item>
+    </string-array>
+    <string-array name="reasoning_effort_values">
+        <item>off</item>
+        <item>minimal</item>
+        <item>none</item>
+        <item>low</item>
+        <item>medium</item>
+        <item>high</item>
+    </string-array>
+    
+    <!-- 外挂AI服务商选项 (图片识别) -->
+    <string-array name="vision_ai_provider_names">
+        <item>OpenAI (GPT-4 Vision)</item>
+        <item>Google (Gemini Vision)</item>
+        <item>Anthropic (Claude Vision)</item>
+        <item>月之暗面 (Kimi Vision)</item>
+        <item>智谱AI (GLM-4V)</item>
+        <item>阿里云DashScope (通义千问VL)</item>
+        <item>字节豆包 (Doubao Vision)</item>
+        <item>百度千帆 (文心视觉)</item>
+        <item>自定义</item>
+    </string-array>
+    <string-array name="vision_ai_provider_values">
+        <item>openai</item>
+        <item>google</item>
+        <item>anthropic</item>
+        <item>kimi</item>
+        <item>glm</item>
+        <item>dashscope</item>
+        <item>doubao</item>
+        <item>baidu</item>
+        <item>custom</item>
+    </string-array>
+</resources>

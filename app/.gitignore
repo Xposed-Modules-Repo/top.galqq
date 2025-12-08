@@ -1,0 +1,16 @@
+# Build outputs
+/build
+/intermediates
+/outputs
+/tmp
+/generated
+
+# Kotlin
+*.kotlin_module
+
+# Android
+*.ap_
+*.dex
+
+# Local configs
+local.properties

@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提示词名称"
+            android:textSize="14sp"
+            android:textColor="?android:attr/textColorSecondary" />
+
+        <EditText
+            android:id="@+id/edit_prompt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="例如：温柔风格、傲娇风格"
+            android:inputType="text"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 提示词内容区域（可折叠） -->
+        <LinearLayout
+            android:id="@+id/section_content_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="提示词内容"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_expand_content"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_fullscreen"
+                android:contentDescription="放大编辑"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageView
+                android:id="@+id/icon_expand_content"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_expand_less" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_prompt_content"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:hint="输入系统提示词主体内容..."
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible" />
+
+        <!-- 输入格式区域（可折叠） -->
+        <LinearLayout
+            android:id="@+id/section_input_format_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="输入格式"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_expand_input_format"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_fullscreen"
+                android:contentDescription="放大编辑"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageView
+                android:id="@+id/icon_expand_input_format"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_expand_more" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_input_format"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="描述输入消息的格式说明..."
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- 输出格式区域（可折叠） -->
+        <LinearLayout
+            android:id="@+id/section_output_format_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="输出格式"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/btn_expand_output_format"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_fullscreen"
+                android:contentDescription="放大编辑"
+                android:background="?attr/selectableItemBackgroundBorderless" />
+
+            <ImageView
+                android:id="@+id/icon_expand_output_format"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_expand_more" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_output_format"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:hint="描述期望的输出格式，如JSON格式要求..."
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:scrollbars="vertical"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone" />
+
+        <!-- 分隔线 -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="?android:attr/listDivider"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 用户白名单开关和输入框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="用户白名单 (强制对这些QQ启用)"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <Switch
+                android:id="@+id/switch_whitelist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_prompt_whitelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="纯数字，逗号分隔，如：123456,789012"
+            android:inputType="text"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 群白名单开关和输入框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="群白名单 (强制在这些群启用)"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <Switch
+                android:id="@+id/switch_group_whitelist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_prompt_group_whitelist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="群号，逗号分隔，如：123456789,987654321"
+            android:inputType="text"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 用户黑名单开关和输入框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="用户黑名单 (强制对这些QQ禁用)"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <Switch
+                android:id="@+id/switch_blacklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_prompt_blacklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="纯数字，逗号分隔，如：123456,789012"
+            android:inputType="text"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 群黑名单开关和输入框 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="群黑名单 (强制在这些群禁用)"
+                android:textSize="14sp"
+                android:textColor="?android:attr/textColorSecondary" />
+
+            <Switch
+                android:id="@+id/switch_group_blacklist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_prompt_group_blacklist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="群号，逗号分隔，如：123456789,987654321"
+            android:inputType="text"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="优先级：用户白名单 > 群白名单 > 用户黑名单 > 群黑名单"
+            android:textSize="12sp"
+            android:textColor="?android:attr/textColorTertiary"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- GalQQ 夜间模式背景色 -->
+    <color name="galqq_background_light">#FF202124</color>
+    <color name="galqq_background_dark">#FF202124</color>
+    
+    <!-- GalQQ 夜间模式文字颜色 -->
+    <color name="galqq_text_primary_light">#FFFFFFFF</color>
+    <color name="galqq_text_primary_dark">#FFFFFFFF</color>
+    <color name="galqq_text_secondary_light">#FFBDC1C6</color>
+    <color name="galqq_text_secondary_dark">#FFBDC1C6</color>
+</resources>
